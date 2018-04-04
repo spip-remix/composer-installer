@@ -1,0 +1,29 @@
+{
+    "name": "spip/composer-installer",
+    "description": "SPIP Composer Installer Plugin",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Hautot",
+            "email": "james@rezo.net"
+        }
+    ],
+    "require": {
+        "php": "^5.3|^7",
+        "composer-plugin-api": "^1.0"
+    },
+    "config": {
+        "platform": {
+            "php": "5.3.29"
+        }
+    },
+    "extra": {
+        "class": "Spip\\Composer\\SpipInstallerPlugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spip\\Composer\\": "src/"
+        }
+    }
+}
