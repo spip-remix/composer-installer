@@ -25,5 +25,14 @@
         "psr-4": {
             "Spip\\Composer\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spip\\Test\\Composer\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "composer/composer": "^1.6"
     }
 }
