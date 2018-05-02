@@ -27,4 +27,9 @@ class Classic
         $filesystem->copy($rootDir . 'tmp/__spip_classic__', $rootDir);
         $filesystem->remove($rootDir . 'tmp/__spip_classic__');
     }
+
+    public static function postUpdate(Event $event)
+    {
+        static::postInstall($event);
+    }
 }
