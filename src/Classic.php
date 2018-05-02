@@ -22,10 +22,10 @@ class Classic
         $filesystem = new Filesystem();
         $rootDir = realpath($event->getComposer()->getConfig()->get('vendor-dir') . '/..');
 
-        $filesystem->remove($rootDir . 'tmp/__spip_classic__/composer.json');
-        $filesystem->remove($rootDir . 'tmp/__spip_classic__/composer.lock');
-        $filesystem->copy($rootDir . 'tmp/__spip_classic__', $rootDir);
-        $filesystem->remove($rootDir . 'tmp/__spip_classic__');
+        $filesystem->remove($rootDir . '/tmp/__spip_classic__/composer.json');
+        $filesystem->remove($rootDir . '/tmp/__spip_classic__/composer.lock');
+        $filesystem->copy($rootDir . '/tmp/__spip_classic__', $rootDir);
+        $filesystem->remove($rootDir . '/tmp/__spip_classic__');
     }
 
     public static function postUpdate(Event $event)
