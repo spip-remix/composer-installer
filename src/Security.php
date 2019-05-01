@@ -24,7 +24,7 @@ class Security
 
         $filesystem->copy(
             $vendorDir . '/spip/security/ecran_securite.php',
-            $vendorDir . '/../config'
+            $vendorDir . '/../config/ecran_securite.php'
         );
     }
 
