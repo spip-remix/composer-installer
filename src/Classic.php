@@ -6,7 +6,7 @@ use Composer\Script\Event;
 use Composer\Util\Filesystem;
 
 /**
- * Script for post-install-cmd and post-install-cmd.
+ * Script for post-install-cmd and post-update-cmd.
  */
 class Classic
 {
