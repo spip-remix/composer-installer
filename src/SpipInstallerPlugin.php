@@ -13,4 +13,14 @@ class SpipInstallerPlugin implements PluginInterface
         $installer = new SpipInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($installer);
     }
+
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+
+    }
+
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
+
+    }
 }
