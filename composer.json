@@ -10,16 +10,13 @@
         }
     ],
     "require": {
-        "php": "^5.3|^7",
-        "composer-plugin-api": "^1.0 || ^2.0"
-    },
-    "config": {
-        "platform": {
-            "php": "5.6.40"
-        }
+        "composer-plugin-api": "^2.3"
     },
     "extra": {
-        "class": "Spip\\Composer\\SpipInstallerPlugin"
+        "class": "Spip\\Composer\\SpipInstallerPlugin",
+        "branch-alias": {
+            "dev-master": "0.5.x-dev"
+        }
     },
     "autoload": {
         "psr-4": {
@@ -32,7 +29,7 @@
         }
     },
     "require-dev": {
-        "composer/composer": "^1.10",
-        "phpunit/phpunit": "^5.7"
+        "composer/composer": "^2.5",
+        "phpunit/phpunit": "^10.0"
     }
 }

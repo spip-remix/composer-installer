@@ -26,9 +26,8 @@ class SpipInstaller extends LibraryInstaller
 
         if ('spip-plugin' === $package->getType()) {
             $extra = $this->composer->getPackage()->getExtra();
-            $template = isset($extra['spip']['template']) ? $extra['spip']['template'] : '';
-            $template = is_string($template) ? $template : '';
-            $extensions = isset($extra['spip']['extensions']) ? $extra['spip']['extensions'] : [];
+            $template = $extra['spip']['template'] ?? '';
+            $extensions = $extra['spip']['extensions'] ?? [];
             $name = $package->getName();
 
             if ($template === $name) {
@@ -48,7 +47,7 @@ class SpipInstaller extends LibraryInstaller
         ))) {
             throw new \InvalidArgumentException(
                 'Unable to install this package as its type is not supported for now.'.
-                ' Wait for SPIP3.4+ for using it.'
+                ' Wait for a future SPIP version for using it.'
             );
         }
     }
@@ -59,12 +58,12 @@ class SpipInstaller extends LibraryInstaller
     public function supports($packageType)
     {
         return in_array($packageType, array(
-            'spip-classic', //SPIP Classic a.k.a. v3.0 to v3.2
-            //Until SPIP 4.0 some packages need to be installed in some particular places
-            'spip-ecrire',  //SPIP CMS Component a.k.a. spip/ecrire v3.3
-            'spip-prive',   //SPIP CMS Component a.k.a. spip/prive v3.3
-            'spip-lang',    //SPIP CMS Component a.k.a. spip/lang v3.4
-            'spip-theme',   //SPIP CMS Component a.k.a. spip/theme v3.4
+            'spip-classic', //SPIP Classic a.k.a. v4.2
+            //Until SPIP X.Y some packages need to be installed in some particular places
+            'spip-ecrire',  //SPIP CMS Component a.k.a. spip/ecrire vX.Y
+            'spip-prive',   //SPIP CMS Component a.k.a. spip/prive vX.Y
+            'spip-lang',    //SPIP CMS Component a.k.a. spip/lang
+            'spip-theme',   //SPIP CMS Component a.k.a. spip/theme
             'spip-plugin',  //an optional or required SPIP plugin or the default template
         ));
     }
